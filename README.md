@@ -275,3 +275,5 @@ curl_close($session);
 **1. For status, type, category, authority, suburb, district and region fields, you can either post String data or Integer Id with related information**
 
 **2. API url, username, password may change in the future**
+
+**3. A single token will be expired within 1 hour**
