@@ -30,6 +30,7 @@ $token = $response['token'];
 
 >sample PHP code:
 ```php
+<?php
 $url =  "http://test3.hougarden.com/api/v1/data-receiver";
 $headers = [
     "Content-Type: application/json",
@@ -40,7 +41,6 @@ $listing = [
     'headline' => 'A Masterpiece of fine living',
     // more fields to be added
 ];
-
 $session = curl_init();
 curl_setopt($session, CURLOPT_URL, $url);
 curl_setopt($session, CURLOPT_POST, true);
