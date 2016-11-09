@@ -1,6 +1,6 @@
 **1. Calling API with 'username' and 'password' to get token.**
 
-**Sample PHP code:**
+>sample PHP code:
 ```php
 <?php
 $userLogin = "http://test3.hougarden.com/api/v1/token/self";
@@ -28,7 +28,7 @@ $token = $response['token'];
 
 **2. Add 'token' into Http Headers and post json listing data to data receiver API. It will return a 201 response if success.**
 
-**Sample PHP code:**
+>sample PHP code:
 ```php
 $url =  "http://test3.hougarden.com/api/v1/data-receiver";
 $headers = [
@@ -281,7 +281,7 @@ curl_close($session);
 
 **3. A single token will be expired within 1 hour, but you can retrive another token by using the refresh token.**
 
-**Sample PHP code:**
+>sample PHP code:
 ```php
 <?php
 $refreshTokenUrl = "http://test3.hougarden.com/api/v1/token/refresh";
