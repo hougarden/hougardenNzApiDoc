@@ -3,7 +3,7 @@
 >sample PHP code:
 ```php
 <?php
-$userLogin = "http://test3.hougarden.com/api/v1/token/self";
+$userLogin = "https://nz.hougarden.com/api/v1/token/self";
 $params = [
     "username" => "xxxxxxxxxxx",
     "password" => "xxxxxx"
@@ -20,8 +20,7 @@ $token = $response['token'];
 >sample response:
 ```json
 {
-"token":"eyJhbGciOiJSUzI1NiJ9.eyJ1c2VybmFtZSI6IjEwMTc2TFDC112OTc2Mjk2MjM3OSIsInRva2VuX2hhc2giOiJlODgzZjEwZjNlNDc3NjY5OTBiYTY1MDFjODAyZjc4YiIsImV4cCI6MTQ3ODY0NTY4MiwiaWF0IjoxNDc4NjQyMDgyfQ.ZZ8RiOYj7gvCdJP3t9CHe6nS_M0yL8_JUSmB3T5V2smhkk9-JFpQma4ndY64Hjuz9eR9rvd-JhnAAwGgB4l__n8-prsHg6TSRSLbNpm5_i6WXGR2lr5T062lmwIXG2t7kjMQupYXZa89xMCAtpbiAyKwouMqcEEFyeSUYJhV0YHGq3LSVzmNdLPEVlJc13KrntYfeIeJLkzHCaOUMLmKvzPDQwcRmv4MAHPIbsOo_gpRKM94jrTPOfr-1WlXIlVj9ruU8zs18Z8kcAwFqls_Gi-Wbsp16KYW5ssdIgR91123F0fECqQ41IykFiiyD7WFXubAdS_Bocl638gnYM3IYRfu11eB7GhEYDpfREsBoKh9bsUgYgG-npOr2IaFChIH4BBfWGwEyrsPwiXWoWVVAane0fELeVdYWLaUM_Y-GyfkqJXDIEBR5dqdlo0GvZUcNxOQcjiuIm_KUpqimsNKhDvr6zhM1He1RV7gX1wYBrOOYmXcy1go_MUjcpHqiNEehh0_dYoMPPpFc0K7k5lA98A7KNGFnb6c38z6rnlnuZkI3VTXBdEo4h0p2W258EDF6Wo3Vg0Yx-AXtD9eg83mpHqLu7DIy0UomT6PdoFePs7y4k43w6rvj_sDM9nFwY9xIDMAoyieCzsqZPGcVhDaem8DOl1Q9vFZ27kkRXQZP3Q",
-"refreshToken":"b30d6bbdacdcbc5467f61ca4cb38376584f70f50fd765b2c74404afe16b6a92214925af26002742ab1c6e232adedf58350493b1422e93a680aaa30a253d3b051"
+"token":"eyJhbGciOiJSUzI1NiJ9.eyJ1c2VybmFtZSI6IjEwMTc2TFDC112OTc2Mjk2MjM3OSIsInRva2VuX2hhc2giOiJlODgzZjEwZjNlNDc3NjY5OTBiYTY1MDFjODAyZjc4YiIsImV4cCI6MTQ3ODY0NTY4MiwiaWF0IjoxNDc4NjQyMDgyfQ.ZZ8RiOYj7gvCdJP3t9CHe6nS_M0yL8_JUSmB3T5V2smhkk9-JFpQma4ndY64Hjuz9eR9rvd-JhnAAwGgB4l__n8-prsHg6TSRSLbNpm5_i6WXGR2lr5T062lmwIXG2t7kjMQupYXZa89xMCAtpbiAyKwouMqcEEFyeSUYJhV0YHGq3LSVzmNdLPEVlJc13KrntYfeIeJLkzHCaOUMLmKvzPDQwcRmv4MAHPIbsOo_gpRKM94jrTPOfr-1WlXIlVj9ruU8zs18Z8kcAwFqls_Gi-Wbsp16KYW5ssdIgR91123F0fECqQ41IykFiiyD7WFXubAdS_Bocl638gnYM3IYRfu11eB7GhEYDpfREsBoKh9bsUgYgG-npOr2IaFChIH4BBfWGwEyrsPwiXWoWVVAane0fELeVdYWLaUM_Y-GyfkqJXDIEBR5dqdlo0GvZUcNxOQcjiuIm_KUpqimsNKhDvr6zhM1He1RV7gX1wYBrOOYmXcy1go_MUjcpHqiNEehh0_dYoMPPpFc0K7k5lA98A7KNGFnb6c38z6rnlnuZkI3VTXBdEo4h0p2W258EDF6Wo3Vg0Yx-AXtD9eg83mpHqLu7DIy0UomT6PdoFePs7y4k43w6rvj_sDM9nFwY9xIDMAoyieCzsqZPGcVhDaem8DOl1Q9vFZ27kkRXQZP3Q"
 }
 ```
 
@@ -31,7 +30,7 @@ $token = $response['token'];
 >sample PHP code:
 ```php
 <?php
-$url =  "http://test3.hougarden.com/api/v1/data-receiver";
+$url =  "https://nz.hougarden.com/api/v1/data-receiver";
 $headers = [
     "Content-Type: application/json",
     "Authorization: User ".$token,
@@ -276,31 +275,4 @@ curl_close($session);
 ##More 
 
 **1. For status, type, category, authority, suburb, district and region fields, you can either post String data or Integer Id with related information**
-
-**2. API url, username, password may change in the future**
-
-**3. A single token will be expired within 1 hour, but you can retrive another token by using the refresh token.**
-
->sample PHP code:
-```php
-<?php
-$refreshTokenUrl = "http://test3.hougarden.com/api/v1/token/refresh";
-$params = [
-    "refreshToken" => "b30d6bbdacdcbc5467f61ca4cb38376584f70f50fd765b2c74404afe16b6a92214925af26002742ab1c6e232adedf58350493b1422e93a680aaa30a253d3b051"
-];
-$session = curl_init(refreshTokenUrl);
-curl_setopt($session, CURLOPT_POST, true);
-curl_setopt($session, CURLOPT_POSTFIELDS, $params);
-curl_setopt($session, CURLOPT_HEADER, false);
-curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-$response = json_decode(curl_exec($session), true);
-curl_close($session);
-$token = $response['token'];
-```
->sample response:
-```json
-{
-"token":"eyJhbGciOiJSUzI1NiJ9.eyJ1c2VybmFtZSI6IjEwMTc2TFDC112OTc2Mjk2MjM3OSIsInRva2VuX2hhc2giOiJlODgzZjEwZjNlNDc3NjY5OTBiYTY1MDFjODAyZjc4YiIsImV4cCI6MTQ3ODY0NTY4MiwiaWF0IjoxNDc4NjQyMDgyfQ.ZZ8RiOYj7gvCdJP3t9CHe6nS_M0yL8_JUSmB3T5V2smhkk9-JFpQma4ndY64Hjuz9eR9rvd-JhnAAwGgB4l__n8-prsHg6TSRSLbNpm5_i6WXGR2lr5T062lmwIXG2t7kjMQupYXZa89xMCAtpbiAyKwouMqcEEFyeSUYJhV0YHGq3LSVzmNdLPEVlJc13KrntYfeIeJLkzHCaOUMLmKvzPDQwcRmv4MAHPIbsOo_gpRKM94jrTPOfr-1WlXIlVj9ruU8zs18Z8kcAwFqls_Gi-Wbsp16KYW5ssdIgR91123F0fECqQ41IykFiiyD7WFXubAdS_Bocl638gnYM3IYRfu11eB7GhEYDpfREsBoKh9bsUgYgG-npOr2IaFChIH4BBfWGwEyrsPwiXWoWVVAane0fELeVdYWLaUM_Y-GyfkqJXDIEBR5dqdlo0GvZUcNxOQcjiuIm_KUpqimsNKhDvr6zhM1He1RV7gX1wYBrOOYmXcy1go_MUjcpHqiNEehh0_dYoMPPpFc0K7k5lA98A7KNGFnb6c38z6rnlnuZkI3VTXBdEo4h0p2W258EDF6Wo3Vg0Yx-AXtD9eg83mpHqLu7DIy0UomT6PdoFePs7y4k43w6rvj_sDM9nFwY9xIDMAoyieCzsqZPGcVhDaem8DOl1Q9vFZ27kkRXQZP3Q",
-"refreshToken":"b30d6bbdacdcbc5467f61ca4cb38376584f70f50fd765b2c74404afe16b6a92214925af26002742ab1c6e232adedf58350493b1422e93a680aaa30a253d3b051"
-}
-```
+**2. A single token may be expired within some time, so the best way is to request a new token with username and password before you start to transfer data each time.**
