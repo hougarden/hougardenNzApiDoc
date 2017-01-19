@@ -275,4 +275,5 @@ curl_close($session);
 ##More 
 
 **1. For status, type, category, authority, suburb, district and region fields, you can either post String data or Integer Id with related information**
+
 **2. A single token may be expired within some time, so the best way is to request a new token with username and password before you start to transfer data each time.**
